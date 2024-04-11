@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'topics/topics_page.dart';
 
 // Shows a simple list of topics with an appbar
 class DashboardPage extends StatelessWidget {
@@ -10,7 +11,7 @@ class DashboardPage extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Meetup Topics"),
       ),
-      body: const Text("Body"),
+      body: const TopicsPage(),
     );
   }
 }

@@ -13,6 +13,11 @@ dependencies:
   injectable: ^2.4.1
   flutter_bloc: ^8.1.5
   go_router: ^13.2.2
+  equatable: ^2.0.5
+  domain:
+    path: packages/domain
+  data:
+    path: packages/data
 
 dev_dependencies:
   flutter_test:
@@ -21,6 +26,7 @@ dev_dependencies:
   go_router_builder:
   build_runner:
   build_verify:
+  injectable_generator:
 
 flutter:
   uses-material-design: true

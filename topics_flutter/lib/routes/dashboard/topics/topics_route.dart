@@ -2,11 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
 @immutable
-class TalkDetailsRoute extends GoRouteData {
-  final int id;
-
-  const TalkDetailsRoute({required this.id});
-
+class TopicsRoute extends GoRouteData {
   @override
   Widget build(BuildContext context, GoRouterState state) {
     // TODO: implement build
