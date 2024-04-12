@@ -15,14 +15,12 @@ RouteBase get $dashboardRoute => GoRouteData.$route(
       factory: $DashboardRouteExtension._fromState,
       routes: [
         GoRouteData.$route(
-          path: 'topics',
-          factory: $TopicsRouteExtension._fromState,
-          routes: [
-            GoRouteData.$route(
-              path: ':id',
-              factory: $TopicsDetailsRouteExtension._fromState,
-            ),
-          ],
+          path: ':id',
+          factory: $TopicDetailsRouteExtension._fromState,
+        ),
+        GoRouteData.$route(
+          path: 'create',
+          factory: $TopicCreateRouteExtension._fromState,
         ),
       ],
     );
@@ -44,11 +42,13 @@ extension $DashboardRouteExtension on DashboardRoute {
   void replace(BuildContext context) => context.replace(location);
 }
 
-extension $TopicsRouteExtension on TopicsRoute {
-  static TopicsRoute _fromState(GoRouterState state) => TopicsRoute();
+extension $TopicDetailsRouteExtension on TopicDetailsRoute {
+  static TopicDetailsRoute _fromState(GoRouterState state) => TopicDetailsRoute(
+        id: int.parse(state.pathParameters['id']!),
+      );
 
   String get location => GoRouteData.$location(
-        '/topics',
+        '/${Uri.encodeComponent(id.toString())}',
       );
 
   void go(BuildContext context) => context.go(location);
@@ -61,14 +61,11 @@ extension $TopicsRouteExtension on TopicsRoute {
   void replace(BuildContext context) => context.replace(location);
 }
 
-extension $TopicsDetailsRouteExtension on TopicsDetailsRoute {
-  static TopicsDetailsRoute _fromState(GoRouterState state) =>
-      TopicsDetailsRoute(
-        id: int.parse(state.pathParameters['id']!),
-      );
+extension $TopicCreateRouteExtension on TopicCreateRoute {
+  static TopicCreateRoute _fromState(GoRouterState state) => TopicCreateRoute();
 
   String get location => GoRouteData.$location(
-        '/topics/${Uri.encodeComponent(id.toString())}',
+        '/create',
       );
 
   void go(BuildContext context) => context.go(location);

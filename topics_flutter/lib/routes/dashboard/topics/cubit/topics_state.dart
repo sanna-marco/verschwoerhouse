@@ -7,6 +7,11 @@ class LoadingState extends TopicsState {
   List<Object> get props => [];
 }
 
+class EmptyState extends TopicsState {
+  @override
+  List<Object> get props => [];
+}
+
 class LoadedState extends TopicsState {
   final List<Topic> topics;
 

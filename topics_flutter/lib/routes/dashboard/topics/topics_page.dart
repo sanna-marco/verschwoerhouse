@@ -9,7 +9,34 @@ class TopicsPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) => TopicsCubit(),
-      child: Container(),
+      child: Padding(
+        padding: const EdgeInsets.all(20),
+        child: BlocConsumer<TopicsCubit, TopicsState>(
+          listener: (context, state) {
+            switch (state) {
+              case ZeroState():
+                context.read<TopicsCubit>().loadTopics();
+            }
+          },
+          builder: (context, state) {
+            switch (state) {
+              case EmptyState():
+                return const Center(
+                  child: Text("No topics yet"),
+                );
+              case final LoadedState state:
+                return ListView.builder(
+                  itemBuilder: (context, index) {
+                    final topic = state.topics[index];
+                    return Text(topic.title);
+                  },
+                );
+              default:
+                return const Text("Error");
+            }
+          },
+        ),
+      ),
     );
   }
 }

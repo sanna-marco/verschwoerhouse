@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:topics_flutter/routes/dashboard/topics/details/details_route.dart';
-import 'package:topics_flutter/routes/dashboard/topics/topics_route.dart';
+import 'package:topics_flutter/routes/dashboard/topics/create/topic_create_route.dart';
+import 'package:topics_flutter/routes/dashboard/topics/details/topic_details_route.dart';
 
 import 'dashboard_page.dart';
 
@@ -11,14 +11,12 @@ part 'dashboard_route.g.dart';
 @TypedGoRoute<DashboardRoute>(
   path: '/',
   routes: [
-    TypedGoRoute<TopicsRoute>(
-      path: 'topics',
-      routes: [
-        TypedGoRoute<TopicsDetailsRoute>(
-          path: ':id',
-        ),
-      ],
+    TypedGoRoute<TopicDetailsRoute>(
+      path: ':id',
     ),
+    TypedGoRoute<TopicCreateRoute>(
+      path: 'create',
+    )
   ],
 )
 @immutable

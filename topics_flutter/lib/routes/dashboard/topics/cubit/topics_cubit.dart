@@ -13,7 +13,11 @@ class TopicsCubit extends Cubit<TopicsState> {
   void loadTopics() async {
     emit(LoadingState());
     final List<Topic> topics = await _topicsRepository.all();
-    emit(LoadedState(topics));
+    if (topics.isEmpty) {
+      emit(EmptyState());
+    } else {
+      emit(LoadedState(topics));
+    }
   }
 
   void addTopic(String title, String description, DateTime dateTime) async {
