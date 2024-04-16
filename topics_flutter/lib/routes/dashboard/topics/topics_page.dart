@@ -12,12 +12,7 @@ class TopicsPage extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(20),
         child: BlocConsumer<TopicsCubit, TopicsState>(
-          listener: (context, state) {
-            switch (state) {
-              case ZeroState():
-                context.read<TopicsCubit>().loadTopics();
-            }
-          },
+          listener: (context, state) {},
           builder: (context, state) {
             switch (state) {
               case EmptyState():
@@ -31,8 +26,13 @@ class TopicsPage extends StatelessWidget {
                     return Text(topic.title);
                   },
                 );
+              case ZeroState():
+                context.read<TopicsCubit>().loadTopics();
+                return const Center(
+                  child: Text("-"),
+                );
               default:
-                return const Text("Error");
+                return const Text("Loading");
             }
           },
         ),

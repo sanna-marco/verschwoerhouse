@@ -2,7 +2,6 @@ import 'package:data/topics/local_topic.dart';
 import 'package:data/topics/local_topics_datasource.dart';
 import 'package:data/util/shared_isar.dart';
 import 'package:domain/domain.dart';
-import 'package:domain/topics/topic.dart';
 import 'package:isar/isar.dart';
 
 // Implements the topics repository where we fetch all topics from
