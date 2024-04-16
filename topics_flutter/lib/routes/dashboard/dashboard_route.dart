@@ -12,7 +12,7 @@ part 'dashboard_route.g.dart';
   path: '/',
   routes: [
     TypedGoRoute<TopicDetailsRoute>(
-      path: ':id',
+      path: 'details/:id',
     ),
     TypedGoRoute<TopicCreateRoute>(
       path: 'create',

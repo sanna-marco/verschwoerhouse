@@ -17,6 +17,7 @@ class SharedIsar {
         [LocalTopicSchema],
         directory: dir.path,
       );
+      _instance = isar;
       return isar;
     }
   }

@@ -5,7 +5,11 @@ import 'package:topics_flutter/routes/dashboard/topics/create/topic_create_page.
 @immutable
 class TopicCreateRoute extends GoRouteData {
   @override
-  Widget build(BuildContext context, GoRouterState state) {
-    return const TopicCreatePage();
+  Page<void> buildPage(BuildContext context, GoRouterState state) {
+    return const MaterialPage(
+      child: Scaffold(
+        body: TopicCreatePage(),
+      ),
+    );
   }
 }

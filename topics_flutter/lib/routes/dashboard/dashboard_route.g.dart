@@ -15,7 +15,7 @@ RouteBase get $dashboardRoute => GoRouteData.$route(
       factory: $DashboardRouteExtension._fromState,
       routes: [
         GoRouteData.$route(
-          path: ':id',
+          path: 'details/:id',
           factory: $TopicDetailsRouteExtension._fromState,
         ),
         GoRouteData.$route(
@@ -48,7 +48,7 @@ extension $TopicDetailsRouteExtension on TopicDetailsRoute {
       );
 
   String get location => GoRouteData.$location(
-        '/${Uri.encodeComponent(id.toString())}',
+        '/details/${Uri.encodeComponent(id.toString())}',
       );
 
   void go(BuildContext context) => context.go(location);
