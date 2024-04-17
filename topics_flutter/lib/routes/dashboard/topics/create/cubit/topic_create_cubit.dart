@@ -40,9 +40,7 @@ class TopicCreateCubit extends Cubit<TopicCreateState> {
     emit(LoadingState());
     DateTime dateTime =
         DateTime(date.year, date.month, date.day, time.hour, time.minute);
-    Topic topic =
-        Topic(title: title, dateTime: dateTime, description: description);
-    await _topicsRepository.add(topic);
+    await _topicsRepository.save(title, dateTime, description);
     emit(SavedState());
   }
 

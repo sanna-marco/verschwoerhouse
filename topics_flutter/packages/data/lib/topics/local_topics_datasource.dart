@@ -7,7 +7,12 @@ import 'local_topic.dart';
 class LocalTopicsDatasource {
   Future<List<LocalTopic>> all() async {
     Isar isar = await SharedIsar.instance();
-    return isar.localTopics.where().sortByDateTime().findAll();
+    return isar.localTopics.where().sortByDateTimeDesc().findAll();
+  }
+
+  Future<LocalTopic?> fetch(int id) async {
+    Isar isar = await SharedIsar.instance();
+    return isar.localTopics.get(id);
   }
 
   Future<void> save(LocalTopic localTopic) async {

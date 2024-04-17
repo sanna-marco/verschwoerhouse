@@ -18,6 +18,7 @@ dependencies:
     path: packages/domain
   data:
     path: packages/data
+  intl: ^0.19.0
 
 dev_dependencies:
   flutter_test:

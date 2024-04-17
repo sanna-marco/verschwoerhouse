@@ -19,6 +19,7 @@ class TopicsRepositoryImpl implements TopicsRepository {
           DateTime? dateTime = localTopic.dateTime;
           if (title != null && description != null && dateTime != null) {
             return Topic(
+              id: localTopic.topicId,
               title: title,
               dateTime: dateTime,
               description: description,
@@ -32,12 +33,30 @@ class TopicsRepositoryImpl implements TopicsRepository {
   }
 
   @override
-  Future<void> add(Topic topic) async {
+  Future<Topic?> fetch(int topicId) async {
+    final localTopic = await _localTopicsDatasource.fetch(topicId);
+    int? id = localTopic?.topicId;
+    String? title = localTopic?.title;
+    String? description = localTopic?.description;
+    DateTime? dateTime = localTopic?.dateTime;
+    if (title != null &&
+        description != null &&
+        dateTime != null &&
+        id != null) {
+      return Topic(
+          id: id, title: title, dateTime: dateTime, description: description);
+    } else {
+      return null;
+    }
+  }
+
+  @override
+  Future<void> save(String title, DateTime dateTime, String description) async {
     // Map to local topic
     final LocalTopic localTopic = LocalTopic()
-      ..title = topic.title
-      ..description = topic.description
-      ..dateTime = topic.dateTime;
+      ..title = title
+      ..description = description
+      ..dateTime = dateTime;
     // Save to local database
     _localTopicsDatasource.save(localTopic);
   }

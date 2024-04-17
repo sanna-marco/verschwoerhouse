@@ -1,11 +1,22 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:topics_flutter/routes/dashboard/topics/create/topic_create_page.dart';
+
+import 'cubit/topic_create_cubit.dart';
 
 @immutable
 class TopicCreateRoute extends GoRouteData {
   @override
   Widget build(BuildContext context, GoRouterState state) {
-    return const TopicCreatePage();
+    return BlocProvider(
+      create: (context) => TopicCreateCubit(),
+      child: Scaffold(
+        appBar: AppBar(
+          title: const Text("New topic"),
+        ),
+        body: TopicCreatePage(),
+      ),
+    );
   }
 }

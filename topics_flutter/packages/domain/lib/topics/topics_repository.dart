@@ -4,8 +4,10 @@ import 'topic.dart';
 abstract class TopicsRepository {
   // Future list, asyncronously fetched
   Future<List<Topic>> all();
-  // Adds a topic
-  Future<void> add(Topic topic);
+  // Future single topic by id
+  Future<Topic?> fetch(int topicId);
+  // Saves a topic to local storage
+  Future<void> save(String title, DateTime dateTime, String description);
   // Observes changes in the database
   Stream<void> watch();
 }

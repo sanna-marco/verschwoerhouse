@@ -26,12 +26,7 @@ class TopicsCubit extends Cubit<TopicsState> {
 
   void addTopic(String title, String description, DateTime dateTime) async {
     emit(LoadingState());
-    final topic = Topic(
-      title: title,
-      dateTime: dateTime,
-      description: description,
-    );
-    await _topicsRepository.add(topic);
+    await _topicsRepository.save(title, dateTime, description);
     loadTopics();
   }
 }
