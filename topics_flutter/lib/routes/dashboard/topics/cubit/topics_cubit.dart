@@ -8,7 +8,11 @@ part 'topics_state.dart';
 
 class TopicsCubit extends Cubit<TopicsState> {
   final _topicsRepository = getIt<TopicsRepository>();
-  TopicsCubit() : super(ZeroState());
+  TopicsCubit() : super(ZeroState()) {
+    _topicsRepository.watch().listen((_) {
+      emit(ChangedState());
+    });
+  }
 
   void loadTopics() async {
     emit(LoadingState());

@@ -21,6 +21,11 @@ class LoadedState extends TopicsState {
   List<Object> get props => [topics];
 }
 
+class ChangedState extends TopicsState {
+  @override
+  List<Object> get props => [];
+}
+
 class ZeroState extends TopicsState {
   @override
   List<Object> get props => [];

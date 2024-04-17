@@ -12,7 +12,11 @@ class TopicsPage extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(20),
         child: BlocConsumer<TopicsCubit, TopicsState>(
-          listener: (context, state) {},
+          listener: (context, state) {
+            if (state is ChangedState) {
+              context.read<TopicsCubit>().loadTopics();
+            }
+          },
           builder: (context, state) {
             switch (state) {
               case EmptyState():
@@ -21,9 +25,17 @@ class TopicsPage extends StatelessWidget {
                 );
               case final LoadedState state:
                 return ListView.builder(
+                  itemCount: state.topics.length,
+                  prototypeItem: ListTile(
+                    title: Text(state.topics.first.title),
+                    subtitle: Text(state.topics.first.description),
+                  ),
                   itemBuilder: (context, index) {
                     final topic = state.topics[index];
-                    return Text(topic.title);
+                    return ListTile(
+                      title: Text(topic.title),
+                      subtitle: Text(topic.description),
+                    );
                   },
                 );
               case ZeroState():

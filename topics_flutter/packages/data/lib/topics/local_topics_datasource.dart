@@ -9,4 +9,17 @@ class LocalTopicsDatasource {
     Isar isar = await SharedIsar.instance();
     return isar.localTopics.where().sortByDateTime().findAll();
   }
+
+  Future<void> save(LocalTopic localTopic) async {
+    Isar isar = await SharedIsar.instance();
+    isar.writeTxn(() async {
+      await isar.localTopics.put(localTopic);
+    });
+  }
+
+  Stream<void> watch() {
+    return SharedIsar.instance().asStream().asyncExpand((isar) {
+      return isar.localTopics.watchLazy();
+    });
+  }
 }

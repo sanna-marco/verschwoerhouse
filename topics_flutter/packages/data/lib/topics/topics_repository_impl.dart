@@ -1,8 +1,6 @@
 import 'package:data/topics/local_topic.dart';
 import 'package:data/topics/local_topics_datasource.dart';
-import 'package:data/util/shared_isar.dart';
 import 'package:domain/domain.dart';
-import 'package:isar/isar.dart';
 
 // Implements the topics repository where we fetch all topics from
 // the local database and return them as well as adding new topics
@@ -40,10 +38,12 @@ class TopicsRepositoryImpl implements TopicsRepository {
       ..title = topic.title
       ..description = topic.description
       ..dateTime = topic.dateTime;
-    // Save to isar
-    Isar isar = await SharedIsar.instance();
-    isar.writeTxn(() async {
-      await isar.localTopics.put(localTopic);
-    });
+    // Save to local database
+    _localTopicsDatasource.save(localTopic);
+  }
+
+  @override
+  Stream<void> watch() {
+    return _localTopicsDatasource.watch();
   }
 }
