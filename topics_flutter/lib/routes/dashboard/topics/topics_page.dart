@@ -33,12 +33,18 @@ class TopicsPage extends StatelessWidget {
                 ),
                 itemBuilder: (context, index) {
                   final topic = state.topics[index];
-                  return ListTile(
-                    title: Text(topic.title),
-                    subtitle: Text(topic.description),
-                    onTap: () {
-                      TopicDetailsRoute(id: topic.id).go(context);
+                  return Dismissible(
+                    key: Key(topic.id.toString()),
+                    onDismissed: (direction) {
+                      context.read<TopicsCubit>().deleteTopic(topic.id);
                     },
+                    child: ListTile(
+                      title: Text(topic.title),
+                      subtitle: Text(topic.description),
+                      onTap: () {
+                        TopicDetailsRoute(id: topic.id).go(context);
+                      },
+                    ),
                   );
                 },
               );

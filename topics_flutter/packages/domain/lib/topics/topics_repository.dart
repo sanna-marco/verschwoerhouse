@@ -10,4 +10,6 @@ abstract class TopicsRepository {
   Future<void> save(String title, DateTime dateTime, String description);
   // Observes changes in the database
   Stream<void> watch();
+  // Removes a topic from local storage
+  Future<void> delete(int topicId);
 }

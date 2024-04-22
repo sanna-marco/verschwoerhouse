@@ -29,4 +29,10 @@ class TopicsCubit extends Cubit<TopicsState> {
     await _topicsRepository.save(title, dateTime, description);
     loadTopics();
   }
+
+  void deleteTopic(int id) async {
+    emit(LoadingState());
+    await _topicsRepository.delete(id);
+    loadTopics();
+  }
 }

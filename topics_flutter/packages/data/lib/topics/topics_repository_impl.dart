@@ -62,6 +62,11 @@ class TopicsRepositoryImpl implements TopicsRepository {
   }
 
   @override
+  Future<void> delete(int topicId) async {
+    _localTopicsDatasource.delete(topicId);
+  }
+
+  @override
   Stream<void> watch() {
     return _localTopicsDatasource.watch();
   }

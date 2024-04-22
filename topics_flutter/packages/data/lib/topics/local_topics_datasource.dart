@@ -22,6 +22,13 @@ class LocalTopicsDatasource {
     });
   }
 
+  Future<void> delete(int topicId) async {
+    Isar isar = await SharedIsar.instance();
+    isar.writeTxn(() async {
+      await isar.localTopics.delete(topicId);
+    });
+  }
+
   Stream<void> watch() {
     return SharedIsar.instance().asStream().asyncExpand((isar) {
       return isar.localTopics.watchLazy();
