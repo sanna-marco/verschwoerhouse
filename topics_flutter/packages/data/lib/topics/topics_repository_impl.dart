@@ -1,6 +1,7 @@
 import 'package:data/topics/local_topic.dart';
 import 'package:data/topics/local_topics_datasource.dart';
 import 'package:domain/domain.dart';
+import 'package:flutter/foundation.dart';
 
 // Implements the topics repository where we fetch all topics from
 // the local database and return them as well as adding new topics
