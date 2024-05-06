@@ -10,6 +10,8 @@ import SwiftData
 import Data
 import Factory
 
+/// Shows a list of topics, moves to details on click.
+/// Details are served from flutter.
 struct TopicsListView: View {
     var viewmodel = TopicsListViewModel()
 

@@ -7,6 +7,8 @@
 
 import Foundation
 
+/// Manages topics
 public protocol TopicsRepository {
+    /// Observes the local database
     func observe() -> AsyncStream<[Topic]>
 }

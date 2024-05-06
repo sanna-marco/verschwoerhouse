@@ -16,6 +16,7 @@
 		A56D02F62BE132FB008836D1 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = A56D02F52BE132FB008836D1 /* Factory */; };
 		A56D02F92BE13362008836D1 /* Container+Topics.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56D02F82BE13362008836D1 /* Container+Topics.swift */; };
 		A56D02FB2BE135E5008836D1 /* PreviewTopicsRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56D02FA2BE135E5008836D1 /* PreviewTopicsRepositoryMock.swift */; };
+		A56D02FD2BE93E66008836D1 /* Pigeon+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56D02FC2BE93E66008836D1 /* Pigeon+Generated.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		A56D02F22BE128AB008836D1 /* TopicsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsListViewModel.swift; sourceTree = "<group>"; };
 		A56D02F82BE13362008836D1 /* Container+Topics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+Topics.swift"; sourceTree = "<group>"; };
 		A56D02FA2BE135E5008836D1 /* PreviewTopicsRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewTopicsRepositoryMock.swift; sourceTree = "<group>"; };
+		A56D02FC2BE93E66008836D1 /* Pigeon+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pigeon+Generated.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				A56D02DD2BDF8EEB008836D1 /* Assets.xcassets */,
+				A56D02FC2BE93E66008836D1 /* Pigeon+Generated.swift */,
 				A56D02F82BE13362008836D1 /* Container+Topics.swift */,
 			);
 			path = utility;
@@ -189,6 +192,7 @@
 				A56D02DA2BDF8EE5008836D1 /* TopicsListView.swift in Sources */,
 				A56D02F92BE13362008836D1 /* Container+Topics.swift in Sources */,
 				A56D02F32BE128AB008836D1 /* TopicsListViewModel.swift in Sources */,
+				A56D02FD2BE93E66008836D1 /* Pigeon+Generated.swift in Sources */,
 				A56D02FB2BE135E5008836D1 /* PreviewTopicsRepositoryMock.swift in Sources */,
 				A56D02D82BDF8EE5008836D1 /* topicsApp.swift in Sources */,
 			);

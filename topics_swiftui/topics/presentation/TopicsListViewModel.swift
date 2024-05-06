@@ -9,6 +9,7 @@ import SwiftUI
 import Factory
 import Domain
 
+/// Manages the topics listview
 @Observable class TopicsListViewModel {
     @ObservationIgnored
     @Injected(\.topicsRepository) var topicsRepository

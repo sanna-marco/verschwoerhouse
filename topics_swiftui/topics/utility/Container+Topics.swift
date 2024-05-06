@@ -9,6 +9,7 @@ import Factory
 import Domain
 import Data
 
+/// Dependency injection using Factory
 extension Container {
     var topicsRepository: Factory<TopicsRepository> {
         Factory(self) { TopicsRepositoryImpl() }

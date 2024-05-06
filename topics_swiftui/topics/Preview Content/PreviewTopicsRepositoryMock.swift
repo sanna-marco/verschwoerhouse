@@ -8,6 +8,7 @@
 import Foundation
 import Domain
 
+/// Mocks the repository just for SwiftUI preview
 class PreviewTopicsRepositoryMock: TopicsRepository {
     func observe() -> AsyncStream<[Topic]> {
         AsyncStream() {
