@@ -5,6 +5,9 @@ import 'package:pigeon/pigeon.dart';
   dartOptions: DartOptions(),
   swiftOut: '../../../topics_swiftui/topics/utility/Pigeon+Generated.swift',
   swiftOptions: SwiftOptions(),
+  kotlinOut:
+      '../../../topics_android/app/src/main/java/com/marcosanna/topics/util/Pigeon.g.kt',
+  kotlinOptions: KotlinOptions(),
   dartPackageName: 'domain',
 ))
 class PigeonTopic {
