@@ -1,13 +1,18 @@
 import 'package:data/topics/local_topic.dart';
 import 'package:data/topics/local_topics_datasource.dart';
+import 'package:data/utility/pigeon.g.dart';
 import 'package:domain/domain.dart';
-import 'package:flutter/foundation.dart';
 
 // Implements the topics repository where we fetch all topics from
 // the local database and return them as well as adding new topics
 // to the local storage using the isar database.
-class TopicsRepositoryImpl implements TopicsRepository {
+class TopicsRepositoryImpl
+    implements TopicsRepository, FlutterTopicsRepository {
   final _localTopicsDatasource = LocalTopicsDatasource();
+
+  TopicsRepositoryImpl() : super() {
+    FlutterTopicsRepository.setUp(this);
+  }
 
   @override
   Future<List<Topic>> all() async {
@@ -70,5 +75,19 @@ class TopicsRepositoryImpl implements TopicsRepository {
   @override
   Stream<void> watch() {
     return _localTopicsDatasource.watch();
+  }
+
+  // Called from the host (iOS, Android native app)
+  @override
+  Future<List<PigeonTopic?>> getTopics() async {
+    final List<Topic> topics = await all();
+    return topics
+        .map((topic) => PigeonTopic(
+              id: topic.id,
+              title: topic.title,
+              description: topic.description,
+              dateTime: topic.dateTime.toIso8601String(),
+            ))
+        .toList();
   }
 }

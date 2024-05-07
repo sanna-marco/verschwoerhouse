@@ -22,6 +22,10 @@ RouteBase get $dashboardRoute => GoRouteData.$route(
           path: 'create',
           factory: $TopicCreateRouteExtension._fromState,
         ),
+        GoRouteData.$route(
+          path: 'detailsOnly/:id',
+          factory: $TopicDetailsOnlyRouteExtension._fromState,
+        ),
       ],
     );
 
@@ -66,6 +70,26 @@ extension $TopicCreateRouteExtension on TopicCreateRoute {
 
   String get location => GoRouteData.$location(
         '/create',
+      );
+
+  void go(BuildContext context) => context.go(location);
+
+  Future<T?> push<T>(BuildContext context) => context.push<T>(location);
+
+  void pushReplacement(BuildContext context) =>
+      context.pushReplacement(location);
+
+  void replace(BuildContext context) => context.replace(location);
+}
+
+extension $TopicDetailsOnlyRouteExtension on TopicDetailsOnlyRoute {
+  static TopicDetailsOnlyRoute _fromState(GoRouterState state) =>
+      TopicDetailsOnlyRoute(
+        id: int.parse(state.pathParameters['id']!),
+      );
+
+  String get location => GoRouteData.$location(
+        '/detailsOnly/${Uri.encodeComponent(id.toString())}',
       );
 
   void go(BuildContext context) => context.go(location);

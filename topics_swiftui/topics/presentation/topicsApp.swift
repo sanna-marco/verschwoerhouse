@@ -7,25 +7,35 @@
 
 import SwiftUI
 import SwiftData
+import Flutter
+import FlutterPluginRegistrant
+import Factory
+import Data
+
+class FlutterDependencies: ObservableObject {
+    let flutterEngine = FlutterEngine(name: "topics engine")
+    init() {
+        /// Runs the default Dart entrypoint with a default Flutter route.
+        flutterEngine.run()
+        /// Connects plugins with iOS platform code to this app.
+        GeneratedPluginRegistrant.register(with: self.flutterEngine);
+    }
+}
 
 @main
 struct topicsApp: App {
-//    var sharedModelContainer: ModelContainer = {
-//        let schema = Schema([
-//            Item.self,
-//        ])
-//        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-//
-//        do {
-//            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-//        } catch {
-//            fatalError("Could not create ModelContainer: \(error)")
-//        }
-//    }()
+    /// Injects flutter related tasks to the swiftui app
+    @StateObject var flutterDependencies = FlutterDependencies()
 
     var body: some Scene {
         WindowGroup {
             TopicsListView()
+                .environmentObject(flutterDependencies)
+                .onAppear {
+                    if let repo = Container.shared.topicsRepository() as? TopicsRepositoryImpl {
+                        repo.set(messenger: flutterDependencies.flutterEngine.binaryMessenger)
+                    }
+                }
         }
     }
 }

@@ -8,10 +8,17 @@
 import Factory
 import Domain
 import Data
+import Flutter
 
 /// Dependency injection using Factory
 extension Container {
     var topicsRepository: Factory<TopicsRepository> {
-        Factory(self) { TopicsRepositoryImpl() }
+        self {
+            return TopicsRepositoryImpl()
+        }
+        .onPreview {
+            return PreviewTopicsRepositoryMock()
+        }
+        .singleton
     }
 }

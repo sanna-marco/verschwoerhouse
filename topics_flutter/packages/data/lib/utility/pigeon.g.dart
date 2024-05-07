@@ -80,7 +80,7 @@ class _FlutterTopicsRepositoryCodec extends StandardMessageCodec {
 abstract class FlutterTopicsRepository {
   static const MessageCodec<Object?> pigeonChannelCodec = _FlutterTopicsRepositoryCodec();
 
-  List<PigeonTopic?> getTopics();
+  Future<List<PigeonTopic?>> getTopics();
 
   static void setUp(FlutterTopicsRepository? api, {BinaryMessenger? binaryMessenger, String messageChannelSuffix = '',}) {
     messageChannelSuffix = messageChannelSuffix.isNotEmpty ? '.$messageChannelSuffix' : '';
@@ -93,7 +93,7 @@ abstract class FlutterTopicsRepository {
       } else {
         __pigeon_channel.setMessageHandler((Object? message) async {
           try {
-            final List<PigeonTopic?> output = api.getTopics();
+            final List<PigeonTopic?> output = await api.getTopics();
             return wrapResponse(result: output);
           } on PlatformException catch (e) {
             return wrapResponse(error: e);

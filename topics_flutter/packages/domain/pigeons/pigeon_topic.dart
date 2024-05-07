@@ -3,7 +3,8 @@ import 'package:pigeon/pigeon.dart';
 @ConfigurePigeon(PigeonOptions(
   dartOut: '../data/lib/utility/pigeon.g.dart',
   dartOptions: DartOptions(),
-  swiftOut: '../../../topics_swiftui/topics/utility/Pigeon+Generated.swift',
+  swiftOut:
+      '../../../topics_swiftui/topics/packages/data/Sources/utility/Pigeon+Generated.swift',
   swiftOptions: SwiftOptions(),
   kotlinOut:
       '../../../topics_android/app/src/main/java/com/marcosanna/topics/util/Pigeon.g.kt',
@@ -26,5 +27,6 @@ class PigeonTopic {
 
 @FlutterApi()
 abstract class FlutterTopicsRepository {
+  @async
   List<PigeonTopic> getTopics();
 }

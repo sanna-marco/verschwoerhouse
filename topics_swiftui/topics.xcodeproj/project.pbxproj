@@ -16,8 +16,36 @@
 		A56D02F62BE132FB008836D1 /* Factory in Frameworks */ = {isa = PBXBuildFile; productRef = A56D02F52BE132FB008836D1 /* Factory */; };
 		A56D02F92BE13362008836D1 /* Container+Topics.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56D02F82BE13362008836D1 /* Container+Topics.swift */; };
 		A56D02FB2BE135E5008836D1 /* PreviewTopicsRepositoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56D02FA2BE135E5008836D1 /* PreviewTopicsRepositoryMock.swift */; };
-		A56D02FD2BE93E66008836D1 /* Pigeon+Generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56D02FC2BE93E66008836D1 /* Pigeon+Generated.swift */; };
+		A56D03012BEA1854008836D1 /* Flutter.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56D02FF2BEA1854008836D1 /* Flutter.xcframework */; };
+		A56D03022BEA1854008836D1 /* Flutter.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A56D02FF2BEA1854008836D1 /* Flutter.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A56D03032BEA1854008836D1 /* App.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56D03002BEA1854008836D1 /* App.xcframework */; };
+		A56D03042BEA1854008836D1 /* App.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A56D03002BEA1854008836D1 /* App.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A56D030B2BEA1E88008836D1 /* FlutterPluginRegistrant.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56D03082BEA1E88008836D1 /* FlutterPluginRegistrant.xcframework */; };
+		A56D030C2BEA1E88008836D1 /* FlutterPluginRegistrant.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A56D03082BEA1E88008836D1 /* FlutterPluginRegistrant.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A56D030D2BEA1E88008836D1 /* isar_flutter_libs.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56D03092BEA1E88008836D1 /* isar_flutter_libs.xcframework */; };
+		A56D030E2BEA1E88008836D1 /* isar_flutter_libs.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A56D03092BEA1E88008836D1 /* isar_flutter_libs.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A56D030F2BEA1E88008836D1 /* path_provider_foundation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56D030A2BEA1E88008836D1 /* path_provider_foundation.xcframework */; };
+		A56D03102BEA1E88008836D1 /* path_provider_foundation.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A56D030A2BEA1E88008836D1 /* path_provider_foundation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		A56D03132BEA72FC008836D1 /* TopicsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56D03122BEA72FC008836D1 /* TopicsDetailView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A56D03052BEA1855008836D1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				A56D03022BEA1854008836D1 /* Flutter.xcframework in Embed Frameworks */,
+				A56D030E2BEA1E88008836D1 /* isar_flutter_libs.xcframework in Embed Frameworks */,
+				A56D030C2BEA1E88008836D1 /* FlutterPluginRegistrant.xcframework in Embed Frameworks */,
+				A56D03102BEA1E88008836D1 /* path_provider_foundation.xcframework in Embed Frameworks */,
+				A56D03042BEA1854008836D1 /* App.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A56D02D42BDF8EE5008836D1 /* topics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = topics.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,7 +58,13 @@
 		A56D02F22BE128AB008836D1 /* TopicsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsListViewModel.swift; sourceTree = "<group>"; };
 		A56D02F82BE13362008836D1 /* Container+Topics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Container+Topics.swift"; sourceTree = "<group>"; };
 		A56D02FA2BE135E5008836D1 /* PreviewTopicsRepositoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewTopicsRepositoryMock.swift; sourceTree = "<group>"; };
-		A56D02FC2BE93E66008836D1 /* Pigeon+Generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Pigeon+Generated.swift"; sourceTree = "<group>"; };
+		A56D02FF2BEA1854008836D1 /* Flutter.xcframework */ = {isa = PBXFileReference; expectedSignature = "AppleDeveloperProgram:S8QB4VV633:FLUTTER.IO LLC"; lastKnownFileType = wrapper.xcframework; name = Flutter.xcframework; path = topics/utility/flutter/Debug/Flutter.xcframework; sourceTree = "<group>"; };
+		A56D03002BEA1854008836D1 /* App.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = App.xcframework; path = topics/utility/flutter/Debug/App.xcframework; sourceTree = "<group>"; };
+		A56D03082BEA1E88008836D1 /* FlutterPluginRegistrant.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = FlutterPluginRegistrant.xcframework; path = topics/utility/flutter/Debug/FlutterPluginRegistrant.xcframework; sourceTree = "<group>"; };
+		A56D03092BEA1E88008836D1 /* isar_flutter_libs.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = isar_flutter_libs.xcframework; path = topics/utility/flutter/Debug/isar_flutter_libs.xcframework; sourceTree = "<group>"; };
+		A56D030A2BEA1E88008836D1 /* path_provider_foundation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = path_provider_foundation.xcframework; path = topics/utility/flutter/Debug/path_provider_foundation.xcframework; sourceTree = "<group>"; };
+		A56D03112BEA3D6D008836D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A56D03122BEA72FC008836D1 /* TopicsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,8 +72,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A56D03012BEA1854008836D1 /* Flutter.xcframework in Frameworks */,
+				A56D030D2BEA1E88008836D1 /* isar_flutter_libs.xcframework in Frameworks */,
 				A56D02F12BDF9B1A008836D1 /* Data in Frameworks */,
 				A56D02F62BE132FB008836D1 /* Factory in Frameworks */,
+				A56D030B2BEA1E88008836D1 /* FlutterPluginRegistrant.xcframework in Frameworks */,
+				A56D03032BEA1854008836D1 /* App.xcframework in Frameworks */,
+				A56D030F2BEA1E88008836D1 /* path_provider_foundation.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +90,7 @@
 			children = (
 				A56D02D62BDF8EE5008836D1 /* topics */,
 				A56D02D52BDF8EE5008836D1 /* Products */,
+				A56D02FE2BEA1854008836D1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +105,7 @@
 		A56D02D62BDF8EE5008836D1 /* topics */ = {
 			isa = PBXGroup;
 			children = (
+				A56D03112BEA3D6D008836D1 /* Info.plist */,
 				A56D02F72BE13338008836D1 /* utility */,
 				A56D02EC2BDF90AD008836D1 /* presentation */,
 				A56D02DF2BDF8EEB008836D1 /* Preview Content */,
@@ -97,6 +138,7 @@
 				A56D02D72BDF8EE5008836D1 /* topicsApp.swift */,
 				A56D02D92BDF8EE5008836D1 /* TopicsListView.swift */,
 				A56D02F22BE128AB008836D1 /* TopicsListViewModel.swift */,
+				A56D03122BEA72FC008836D1 /* TopicsDetailView.swift */,
 			);
 			path = presentation;
 			sourceTree = "<group>";
@@ -105,10 +147,21 @@
 			isa = PBXGroup;
 			children = (
 				A56D02DD2BDF8EEB008836D1 /* Assets.xcassets */,
-				A56D02FC2BE93E66008836D1 /* Pigeon+Generated.swift */,
 				A56D02F82BE13362008836D1 /* Container+Topics.swift */,
 			);
 			path = utility;
+			sourceTree = "<group>";
+		};
+		A56D02FE2BEA1854008836D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A56D03082BEA1E88008836D1 /* FlutterPluginRegistrant.xcframework */,
+				A56D03092BEA1E88008836D1 /* isar_flutter_libs.xcframework */,
+				A56D030A2BEA1E88008836D1 /* path_provider_foundation.xcframework */,
+				A56D03002BEA1854008836D1 /* App.xcframework */,
+				A56D02FF2BEA1854008836D1 /* Flutter.xcframework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,6 +174,7 @@
 				A56D02D02BDF8EE5008836D1 /* Sources */,
 				A56D02D12BDF8EE5008836D1 /* Frameworks */,
 				A56D02D22BDF8EE5008836D1 /* Resources */,
+				A56D03052BEA1855008836D1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -190,9 +244,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A56D02DA2BDF8EE5008836D1 /* TopicsListView.swift in Sources */,
+				A56D03132BEA72FC008836D1 /* TopicsDetailView.swift in Sources */,
 				A56D02F92BE13362008836D1 /* Container+Topics.swift in Sources */,
 				A56D02F32BE128AB008836D1 /* TopicsListViewModel.swift in Sources */,
-				A56D02FD2BE93E66008836D1 /* Pigeon+Generated.swift in Sources */,
 				A56D02FB2BE135E5008836D1 /* PreviewTopicsRepositoryMock.swift in Sources */,
 				A56D02D82BDF8EE5008836D1 /* topicsApp.swift in Sources */,
 			);
@@ -331,6 +385,7 @@
 				DEVELOPMENT_TEAM = W9MBVS8ABZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = topics/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -360,6 +415,7 @@
 				DEVELOPMENT_TEAM = W9MBVS8ABZ;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = topics/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

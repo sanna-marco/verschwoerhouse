@@ -24,3 +24,18 @@ class TopicDetailsRoute extends GoRouteData {
     );
   }
 }
+
+@immutable
+class TopicDetailsOnlyRoute extends GoRouteData {
+  final int id;
+
+  const TopicDetailsOnlyRoute({required this.id});
+
+  @override
+  Widget build(BuildContext context, GoRouterState state) {
+    return BlocProvider(
+      create: (context) => TopicDetailsCubit(),
+      child: TopicDetailsPage(id: id),
+    );
+  }
+}

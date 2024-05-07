@@ -18,6 +18,9 @@ part 'dashboard_route.g.dart';
     ),
     TypedGoRoute<TopicCreateRoute>(
       path: 'create',
+    ),
+    TypedGoRoute<TopicDetailsOnlyRoute>(
+      path: 'detailsOnly/:id',
     )
   ],
 )

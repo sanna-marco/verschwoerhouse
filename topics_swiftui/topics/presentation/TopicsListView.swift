@@ -19,14 +19,28 @@ struct TopicsListView: View {
         NavigationStack {
             List {
                 ForEach(viewmodel.topics) { topic in
-                    HStack {
-                        Text(topic.title)
-                        Text(topic.description)
+                    NavigationLink {
+                        TopicsDetailView(topicId: topic.id)
+                    } label: {
+                        HStack(alignment: .top) {
+                            Text(topic.title)
+                            Spacer()
+                            VStack(alignment: .trailing) {
+                                Text(topic.date.formatted())
+                                    .foregroundStyle(.secondary)
+                                Text(topic.description)
+                                    .multilineTextAlignment(.trailing)
+                            }
+                            .font(.caption)
+                        }
                     }
                 }
             }
             .task {
-                await viewmodel.observe()
+                await viewmodel.getTopics()
+            }
+            .refreshable {
+                await viewmodel.getTopics()
             }
             .navigationTitle("Topics")
         }
@@ -34,6 +48,5 @@ struct TopicsListView: View {
 }
 
 #Preview {
-    let _ = Container.shared.topicsRepository.register { PreviewTopicsRepositoryMock() }
-    return TopicsListView()
+    TopicsListView()
 }

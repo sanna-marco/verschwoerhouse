@@ -20,9 +20,7 @@ import Domain
 
     // MARK: - Interaction
 
-    func observe() async {
-        for await topics in topicsRepository.observe() {
-            self.topics = topics
-        }
+    func getTopics() async {
+        topics = await topicsRepository.all()
     }
 }
