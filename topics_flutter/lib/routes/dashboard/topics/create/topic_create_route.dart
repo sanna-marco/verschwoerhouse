@@ -8,14 +8,17 @@ import 'cubit/topic_create_cubit.dart';
 @immutable
 class TopicCreateRoute extends GoRouteData {
   @override
-  Widget build(BuildContext context, GoRouterState state) {
-    return BlocProvider(
-      create: (context) => TopicCreateCubit(),
-      child: Scaffold(
-        appBar: AppBar(
-          title: const Text("New topic"),
+  Page<void> buildPage(BuildContext context, GoRouterState state) {
+    return MaterialPage(
+      fullscreenDialog: true,
+      child: BlocProvider(
+        create: (context) => TopicCreateCubit(),
+        child: Scaffold(
+          appBar: AppBar(
+            title: const Text("New topic"),
+          ),
+          body: TopicCreatePage(),
         ),
-        body: TopicCreatePage(),
       ),
     );
   }

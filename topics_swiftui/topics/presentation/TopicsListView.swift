@@ -14,6 +14,7 @@ import Factory
 /// Details are served from flutter.
 struct TopicsListView: View {
     var viewmodel = TopicsListViewModel()
+    @State var showCreateView = false
 
     var body: some View {
         NavigationStack {
@@ -36,11 +37,27 @@ struct TopicsListView: View {
                     }
                 }
             }
+            .toolbar {
+                ToolbarItem(placement: .primaryAction) {
+                    Button {
+                        showCreateView.toggle()
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                }
+            }
             .task {
                 await viewmodel.getTopics()
             }
             .refreshable {
                 await viewmodel.getTopics()
+            }
+            .sheet(isPresented: $showCreateView, onDismiss: {
+                Task {
+                    await viewmodel.getTopics()
+                }
+            }) {
+                TopicsCreateView()
             }
             .navigationTitle("Topics")
         }

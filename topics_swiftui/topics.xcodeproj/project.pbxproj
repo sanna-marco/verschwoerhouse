@@ -27,6 +27,7 @@
 		A56D030F2BEA1E88008836D1 /* path_provider_foundation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = A56D030A2BEA1E88008836D1 /* path_provider_foundation.xcframework */; };
 		A56D03102BEA1E88008836D1 /* path_provider_foundation.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A56D030A2BEA1E88008836D1 /* path_provider_foundation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A56D03132BEA72FC008836D1 /* TopicsDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56D03122BEA72FC008836D1 /* TopicsDetailView.swift */; };
+		A56D03172BEBBDE6008836D1 /* TopicsCreateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56D03162BEBBDE6008836D1 /* TopicsCreateView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -65,6 +66,7 @@
 		A56D030A2BEA1E88008836D1 /* path_provider_foundation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = path_provider_foundation.xcframework; path = topics/utility/flutter/Debug/path_provider_foundation.xcframework; sourceTree = "<group>"; };
 		A56D03112BEA3D6D008836D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A56D03122BEA72FC008836D1 /* TopicsDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsDetailView.swift; sourceTree = "<group>"; };
+		A56D03162BEBBDE6008836D1 /* TopicsCreateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicsCreateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 				A56D02D92BDF8EE5008836D1 /* TopicsListView.swift */,
 				A56D02F22BE128AB008836D1 /* TopicsListViewModel.swift */,
 				A56D03122BEA72FC008836D1 /* TopicsDetailView.swift */,
+				A56D03162BEBBDE6008836D1 /* TopicsCreateView.swift */,
 			);
 			path = presentation;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A56D03172BEBBDE6008836D1 /* TopicsCreateView.swift in Sources */,
 				A56D02DA2BDF8EE5008836D1 /* TopicsListView.swift in Sources */,
 				A56D03132BEA72FC008836D1 /* TopicsDetailView.swift in Sources */,
 				A56D02F92BE13362008836D1 /* Container+Topics.swift in Sources */,
