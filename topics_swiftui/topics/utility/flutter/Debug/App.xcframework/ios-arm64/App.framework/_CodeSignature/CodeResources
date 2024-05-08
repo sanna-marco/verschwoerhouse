@@ -10,11 +10,11 @@
 		</data>
 		<key>flutter_assets/AssetManifest.bin</key>
 		<data>
-		ME0cAg6cl/bTZmwXEVgMugDccUI=
+		t6NIiJtcvyTjDi8quGh9U6ucfu8=
 		</data>
 		<key>flutter_assets/AssetManifest.json</key>
 		<data>
-		oG5/OGn+vw7vp/nu5DUDoZJ4nFc=
+		xT+lMRyusoQBNh6QoAtmzK431Xw=
 		</data>
 		<key>flutter_assets/FontManifest.json</key>
 		<data>
@@ -22,7 +22,31 @@
 		</data>
 		<key>flutter_assets/NOTICES.Z</key>
 		<data>
-		XGVQTVxylCTns9EguPGXm4PTXVE=
+		+Mq4lJINX77aW6/WNVH6aX0SDpU=
+		</data>
+		<key>flutter_assets/assets/Logo_VSH_black.svg</key>
+		<data>
+		g7930NW85rM+ke51YeZ4qcHilK8=
+		</data>
+		<key>flutter_assets/assets/Logo_VSH_green.svg</key>
+		<data>
+		xzvlVqXwbA81/kswS1l/cBGZChk=
+		</data>
+		<key>flutter_assets/assets/Logo_VSH_lila.svg</key>
+		<data>
+		m5dH+QFzON3nTMTXNJFMj5C9T8s=
+		</data>
+		<key>flutter_assets/assets/Logo_VSH_pink.svg</key>
+		<data>
+		Ih5FaFPYyarDf0sbQ3DjSDfw5/0=
+		</data>
+		<key>flutter_assets/assets/Logo_VSH_white.svg</key>
+		<data>
+		yR7FdTt4D4UpBx6U7dJ/Xv/u4cE=
+		</data>
+		<key>flutter_assets/assets/Logo_VSH_yellow.svg</key>
+		<data>
+		QfZZdoApyNqzVreLCz9+jhsTJow=
 		</data>
 		<key>flutter_assets/fonts/MaterialIcons-Regular.otf</key>
 		<data>
@@ -34,7 +58,7 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		z2oypbEsKvJzkIcJQz7Ew8jdQJU=
+		Vhm4T/FcObaWUvgSOND/uvf7H/Y=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -55,14 +79,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			AK9VrT1vIYmP534P8JLRoc2lLJQbaGDpko1FyK+MCV0=
+			ZAQSGrZWfBJzJLtTwiYYG610sD6d6caBmJePpACyrZ4=
 			</data>
 		</dict>
 		<key>flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Sps95+7JukayebvM0TLjL1LW1VXXndpKp/O8tOm9ZR8=
+			DwymaGrvYrYpJhSC3dWcki+pb0qbQqbuE4Fdr64CXuU=
 			</data>
 		</dict>
 		<key>flutter_assets/FontManifest.json</key>
@@ -76,7 +100,49 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			REchzdAUWAAg7xIFF0R5coOmhQXXlJemmBPbfNzXGZ0=
+			/Oh9p0g2JQQPQDRH4MN+jhTx6dxE6FegrLbokMOvwGk=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/Logo_VSH_black.svg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			Iq9zJ2ieOlpNnmOCWQPaWMslRQ0ibv+RYNi0jzflKb0=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/Logo_VSH_green.svg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			uqr3pCpbyPEb4GSmfkqi6vFMobMYk25fn4D4cikwnYM=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/Logo_VSH_lila.svg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			uBoduYZVVxKPtlYuWvkBW1eJHtHPiAuTJJ+V3Y5izCQ=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/Logo_VSH_pink.svg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			HmEkOTZd1AL2dkNEMHqvSOsEOVVKES3EjA2An5xwuag=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/Logo_VSH_white.svg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			5ctvUy3uAzLFF2FLuhW/cW4Jkl9XULdhM7JHVc86CIc=
+			</data>
+		</dict>
+		<key>flutter_assets/assets/Logo_VSH_yellow.svg</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			dHcsP6WdkosakupCq+ZHuKp78EMun+/QSDJ/P6NVAVk=
 			</data>
 		</dict>
 		<key>flutter_assets/fonts/MaterialIcons-Regular.otf</key>
@@ -97,7 +163,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			LpWlBcVzF83u78nRrRbao3Vp9rO6V8oILCvbmzV/aF4=
+			IvvKsPzxU6k6CfuEE4Sng0D9B7TB7S7/uWKOtxImb9Q=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>

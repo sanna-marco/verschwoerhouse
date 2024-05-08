@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:domain/domain.dart';
 import 'package:equatable/equatable.dart';
@@ -14,7 +16,11 @@ class TopicDetailsCubit extends Cubit<TopicDetailsState> {
     emit(LoadingState());
     final topic = await _topicsRepository.fetch(id);
     if (topic != null) {
-      emit(LoadedState(topic));
+      // Randomizing the color
+      final colors = ['black', 'green', 'lila', 'pink', 'yellow'];
+      final random = Random();
+      final color = colors[random.nextInt(colors.length)];
+      emit(LoadedState(topic, color));
     } else {
       emit(ErrorState());
     }

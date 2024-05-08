@@ -11,8 +11,9 @@ class LoadingState extends TopicDetailsState {}
 
 class LoadedState extends TopicDetailsState {
   final Topic topic;
+  final String color;
 
-  LoadedState(this.topic);
+  LoadedState(this.topic, this.color);
 
   @override
   List<Object> get props => [topic];

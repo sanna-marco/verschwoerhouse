@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:topics_flutter/routes/dashboard/dashboard_route.dart';
-import 'package:topics_flutter/routes/dashboard/topics/details/topic_details_route.dart';
+import 'package:topics_flutter/routes/dashboard/topics/topics_list_item.dart';
 
 import 'cubit/topics_cubit.dart';
 
@@ -27,10 +26,7 @@ class TopicsPage extends StatelessWidget {
             case final LoadedState state:
               return ListView.builder(
                 itemCount: state.topics.length,
-                prototypeItem: ListTile(
-                  title: Text(state.topics.first.title),
-                  subtitle: Text(state.topics.first.description),
-                ),
+                prototypeItem: TopicsListItem(topic: state.topics.first),
                 itemBuilder: (context, index) {
                   final topic = state.topics[index];
                   return Dismissible(
@@ -38,13 +34,7 @@ class TopicsPage extends StatelessWidget {
                     onDismissed: (direction) {
                       context.read<TopicsCubit>().deleteTopic(topic.id);
                     },
-                    child: ListTile(
-                      title: Text(topic.title),
-                      subtitle: Text(topic.description),
-                      onTap: () {
-                        TopicDetailsRoute(id: topic.id).go(context);
-                      },
-                    ),
+                    child: TopicsListItem(topic: topic),
                   );
                 },
               );
