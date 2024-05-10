@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import 'cubit/topic_details_cubit.dart';
 import 'topic_details_page.dart';
 
+// This route is used in the flutter app implementation
 @immutable
 class TopicDetailsRoute extends GoRouteData {
   final int id;
@@ -25,6 +26,8 @@ class TopicDetailsRoute extends GoRouteData {
   }
 }
 
+// This route should be used in native context to disable
+// the app bar and swipe back gesture
 @immutable
 class TopicDetailsOnlyRoute extends GoRouteData {
   final int id;
@@ -36,7 +39,10 @@ class TopicDetailsOnlyRoute extends GoRouteData {
     return Scaffold(
       body: BlocProvider(
         create: (context) => TopicDetailsCubit(),
-        child: TopicDetailsPage(id: id),
+        child: PopScope(
+          canPop: false,
+          child: TopicDetailsPage(id: id),
+        ),
       ),
     );
   }
