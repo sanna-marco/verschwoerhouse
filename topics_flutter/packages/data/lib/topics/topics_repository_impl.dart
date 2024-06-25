@@ -79,7 +79,7 @@ class TopicsRepositoryImpl
 
   // Called from the host (iOS, Android native app)
   @override
-  Future<List<PigeonTopic?>> getTopics() async {
+  Future<List<PigeonTopic>> getTopics() async {
     final List<Topic> topics = await all();
     return topics
         .map((topic) => PigeonTopic(
