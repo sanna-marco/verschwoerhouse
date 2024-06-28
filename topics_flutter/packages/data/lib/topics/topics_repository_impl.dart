@@ -68,13 +68,13 @@ class TopicsRepositoryImpl
   }
 
   @override
-  Future<void> delete(int topicId) async {
-    _localTopicsDatasource.delete(topicId);
+  Stream<void> watch() {
+    return _localTopicsDatasource.watch();
   }
 
   @override
-  Stream<void> watch() {
-    return _localTopicsDatasource.watch();
+  Future<void> delete(int topicId) async {
+    _localTopicsDatasource.delete(topicId);
   }
 
   // Called from the host (iOS, Android native app)

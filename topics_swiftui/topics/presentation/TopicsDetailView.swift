@@ -41,6 +41,6 @@ class FlutterTopicsDependencies: ObservableObject {
         /// Runs at the specific route
         flutterEngine.run(withEntrypoint: nil, initialRoute: "/detailsOnly/\(topicId)")
         /// Connects plugins with iOS platform code to this app.
-        GeneratedPluginRegistrant.register(with: self.flutterEngine);
+        GeneratedPluginRegistrant.register(with: self.flutterEngine)
     }
 }

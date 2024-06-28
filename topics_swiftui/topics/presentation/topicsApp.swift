@@ -18,7 +18,7 @@ class FlutterDependencies: ObservableObject {
         /// Runs the default Dart entrypoint with a default Flutter route.
         flutterEngine.run()
         /// Connects plugins with iOS platform code to this app.
-        GeneratedPluginRegistrant.register(with: self.flutterEngine);
+        GeneratedPluginRegistrant.register(with: self.flutterEngine)
     }
 }
 
